@@ -1,32 +1,19 @@
 let imageArray = [
   "./attachments/images/projects/portfolio.jpg",
   "./attachments/images/projects/project2.jpg",
+  "./attachments/images/projects/project3.png",
 ];
 
-let works = document.getElementById("works");
+let index = 0;
+let first = document.getElementById("first");
+let second = document.getElementById("second");
 
-// Ensure the works div exists
-if (works) {
-  // Create two image elements if not already in HTML
-  let first = document.createElement("img");
-  first.id = "first";
-  first.alt = "Project Image";
-  works.appendChild(first);
+// Initially set images
+first.src = imageArray[0];
+second.src = imageArray[1];
 
-  let second = document.createElement("img");
-  second.id = "second";
-  second.alt = "Project Image";
-  works.appendChild(second);
-
-  let index = 0;
-
-  // Function to rotate images
-  function rotateImages() {
-    first.src = imageArray[index];
-    index = (index + 1) % imageArray.length; // Rotate index
-    second.src = imageArray[index];
-  }
-
-  rotateImages(); // Load initial images
-  setInterval(rotateImages, 2000); // Change images every 2 seconds
-}
+setInterval(() => {
+  index = (index + 1) % imageArray.length; // Rotate index
+  first.src = imageArray[index];
+  second.src = imageArray[(index + 1) % imageArray.length]; // Next image
+}, 2000);
