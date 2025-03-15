@@ -16,7 +16,7 @@
 }
 
 .info h1 {
-  font-size: 50px;
+  font: var(--h1);
 }
 
 .info p {
@@ -29,11 +29,9 @@
 }
 @media (max-width: 1000px) {
   /* About me*/
-
   .info h1 {
-    font-size: 35px;
+    font: var(--h1);
   }
-
   .info p {
     margin: 0;
     font-size: 23px;
