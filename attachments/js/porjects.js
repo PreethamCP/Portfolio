@@ -1,7 +1,7 @@
 let imageArray = [
   "./attachments/images/projects/portfolio.jpg",
   "./attachments/images/projects/clock.png",
-
+  "./attachments/images/projects/elevator.png",
   "./attachments/images/projects/calc.jpeg",
 ];
 
