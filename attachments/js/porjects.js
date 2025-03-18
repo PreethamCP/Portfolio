@@ -1,6 +1,6 @@
 let imageArray = [
   "./attachments/images/projects/portfolio.jpg",
-  "./attachments/images/projects/project2.jpg",
+  "./attachments/images/projects/project2.jepg",
   "./attachments/images/projects/project3.png",
 ];
 
