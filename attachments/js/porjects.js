@@ -1,7 +1,8 @@
 let imageArray = [
   "./attachments/images/projects/portfolio.jpg",
-  "./attachments/images/projects/project2.jepg",
-  "./attachments/images/projects/project3.png",
+  "./attachments/images/projects/clock.png",
+
+  "./attachments/images/projects/calc.jpeg",
 ];
 
 let index = 0;
