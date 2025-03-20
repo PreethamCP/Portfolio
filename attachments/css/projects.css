@@ -12,6 +12,11 @@
   padding: 20px;
   font: var(--h1);
 }
+/* .cards {
+  display: grid;
+  grid-column: 1fr 1fr;
+  grid-row: 1fr 1fr;
+} */
 .card {
   background-color: black;
   height: 400px;
@@ -19,8 +24,28 @@
   margin: 20px;
 }
 figure {
+  width: 300px;
   color: white;
   font: var(--h2);
+}
+.card figure img {
+  width: 300px;
+  height: 100px;
+}
+figcaption {
+  width: 300px;
+}
+@media (max-width: 1000px) {
+  .card figure img {
+    width: 200px;
+    height: 100px;
+  }
+  .card {
+    width: 200px;
+  }
+  figcaption {
+    width: 200px;
+  }
 }
 /* .works {
   width: 90vw;
