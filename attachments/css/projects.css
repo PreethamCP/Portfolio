@@ -14,7 +14,7 @@
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   justify-content: center;
 }
@@ -25,6 +25,7 @@
   border-radius: 10px;
   margin: 10px;
   text-align: center;
+  cursor: pointer;
 }
 
 figure {
@@ -41,10 +42,20 @@ figure {
 
 figcaption {
   margin-top: 5px;
-  font-style: italic;
+  font-size: 43px;
   color: white;
 }
 
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr; /* Single column layout */
