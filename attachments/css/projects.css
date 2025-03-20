@@ -12,41 +12,45 @@
   padding: 20px;
   font: var(--h1);
 }
-/* .cards {
+.cards {
   display: grid;
-  grid-column: 1fr 1fr;
-  grid-row: 1fr 1fr;
-} */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
 .card {
   background-color: black;
   height: 400px;
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px;
+  text-align: center;
 }
+
 figure {
-  width: 300px;
   color: white;
-  font: var(--h2);
+  font-size: 18px;
 }
+
 .card figure img {
-  width: 300px;
-  height: 100px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 5px;
 }
+
 figcaption {
-  width: 300px;
+  margin-top: 5px;
+  font-style: italic;
+  color: white;
 }
-@media (max-width: 1000px) {
-  .card figure img {
-    width: 200px;
-    height: 100px;
-  }
-  .card {
-    width: 200px;
-  }
-  figcaption {
-    width: 200px;
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; /* Single column layout */
   }
 }
+
 /* .works {
   width: 90vw;
   display: grid;
