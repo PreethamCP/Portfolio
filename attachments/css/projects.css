@@ -21,7 +21,7 @@
 
 .card {
   background-color: black;
-  height: 400px;
+  height: 500px;
   border-radius: 10px;
   margin: 10px;
   text-align: center;
@@ -41,11 +41,15 @@ figure {
 }
 
 figcaption {
-  margin-top: 5px;
-  font-size: 43px;
-  color: white;
+  margin-top: 35px;
+  font-size: 35px;
+  color: #00947e;
+  font-family: var(--ff);
 }
-
+.cardInfo {
+  margin-top: 40px;
+  font-family: var(--ff);
+}
 @media (max-width: 1200px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
