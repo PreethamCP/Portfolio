@@ -9,19 +9,30 @@
   <body>
     <!-- Loader -->
     <div class="loader" id="loader">
-      <div class="loader-spinner"></div>
+      <div class="aurora-loader">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
     </div>
 
-    <!-- Galaxy Background -->
-    <div id="galaxy-bg"></div>
+    <!-- Aurora Background -->
+    <div id="aurora-container">
+      <div class="aurora-layer layer1"></div>
+      <div class="aurora-layer layer2"></div>
+      <div class="aurora-layer layer3"></div>
+    </div>
 
-    <!-- Electrons -->
-    <canvas id="electrons"></canvas>
+    <!-- Floating Particles -->
+    <canvas id="particles"></canvas>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" class="glass-nav">
       <div class="nav-container">
-        <div class="logo">C Preetham</div>
+        <div class="logo">
+          <!-- <div class="logo-shape"></div> -->
+          <span>C Preetham</span>
+        </div>
         <ul class="nav-links" id="navLinks">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -29,28 +40,43 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="menu-toggle" id="menuToggle">
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero">
+      <div class="hero-bg-gradient"></div>
       <div class="container">
         <div class="hero-content">
-          <h1 class="parallax-element" data-speed="2">
-            Welcome to My Universe
-          </h1>
-          <p class="subtitle parallax-element" data-speed="3">
-            Electronics and Communication Engineer & Creative Thinker
+          <div class="hero-title-wrapper">
+            <h1 class="hero-title">
+              <span class="title-word">Creative</span>
+              <span class="title-word">Innovative</span>
+              <span class="title-word">Learning</span>
+            </h1>
+          </div>
+          <p class="hero-subtitle">Final Year E&C Engineer |Sir M VIT</p>
+          <p class="hero-description">
+            Building smart, hands-on solutions that blend electronics, IoT, and AI to bring ideas to life.
           </p>
-          <p class="parallax-element" data-speed="4">
-            Exploring electronics with curiosity and creativity
-          </p>
-          <a href="#about" class="btn">Explore My Work</a>
+          <div class="hero-cta">
+            <a href="#projects" class="primary-btn glass-btn">
+              <span>See my Projects</span>
+              <div class="btn-glow"></div>
+            </a>
+            <a href="#contact" class="secondary-btn glass-btn">
+              <span>Contact Me</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="floating-shape shape1"></div>
+          <div class="floating-shape shape2"></div>
+          <div class="floating-shape shape3"></div>
         </div>
       </div>
     </section>
@@ -58,9 +84,15 @@
     <!-- About Section -->
     <section id="about">
       <div class="container">
-        <div class="about-content fade-in">
-          <div class="about-text">
-            <h2>About Me</h2>
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="gradient-text">About Me</span>
+            <div class="title-decoration"></div>
+          </h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text glass-card">
+            <h3>Hello, I'm Preetham</h3>
             <p>
               I'm an electronics student with a passion for designing and
               experimenting with circuits. I enjoy learning how things work at
@@ -73,83 +105,43 @@
               believe in continuous learning, experimenting, and pushing myself
               to explore new possibilities in this field.
             </p>
+
+            <!-- <div class="about-stats">
+              <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="30">0</div>
+                <div class="stat-label">Happy Clients</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">Awards Won</div>
+              </div>
+            </div> -->
           </div>
-          <div class="about-image">
-            <div class="placeholder-image">
-              <span>Your Photo</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <div class="carousel-wrapper">
-          <button class="carousel-btn prev" id="skills-prev">‹</button>
-          <button class="carousel-btn next" id="skills-next">›</button>
-          <div class="carousel-indicators" id="skills-indicators"></div>
-          <div class="skills-carousel" id="skills-carousel">
-            <div class="carousel-track" id="skills-track">
-              <!-- Embedded Systems -->
-              <div class="skill-card fade-in">
-                <div class="skill-icon">⚡</div>
-                <h3>Embedded Systems</h3>
-                <p>Arduino, ESP32, STM32, Raspberry Pi</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-skill="85"></div>
+          <div class="about-visual">
+            <div class="profile-card glass-card">
+              <div class="profile-image">
+                <div class="image-placeholder">
+                  <div class="image-gradient"></div>
                 </div>
               </div>
-
-              <!-- Firmware Development -->
-              <div class="skill-card fade-in">
-                <div class="skill-icon">🔧</div>
-                <h3>Firmware Development</h3>
-                <p>C, C++, Microcontroller Programming</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-skill="80"></div>
-                </div>
-              </div>
-
-              <!-- Circuit Design -->
-              <div class="skill-card fade-in">
-                <div class="skill-icon">📐</div>
-                <h3>Circuit Design</h3>
-                <p>Analog & Digital Electronics, PCB Design</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-skill="75"></div>
-                </div>
-              </div>
-
-              <!-- Web Development -->
-              <div class="skill-card fade-in">
-                <div class="skill-icon">🌐</div>
-                <h3>Web Development</h3>
-                <p>HTML, CSS, JavaScript, Django</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-skill="82"></div>
-                </div>
-              </div>
-
-              <!-- Version Control -->
-              <div class="skill-card fade-in">
-                <div class="skill-icon">📂</div>
-                <h3>Version Control</h3>
-                <p>Git, GitHub, Collaboration</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-skill="78"></div>
-                </div>
-              </div>
-
-              <!-- IoT & Connectivity -->
-              <div class="skill-card fade-in">
-                <div class="skill-icon">📶</div>
-                <h3>IoT & Connectivity</h3>
-                <p>Wi-Fi, Bluetooth, MQTT, Cloud Integration</p>
-                <div class="skill-bar">
-                  <div class="skill-progress" data-skill="70"></div>
+              <div class="profile-info">
+                <h4>C Preetham</h4>
+                <p>Final Year</p>
+                <p>Electronics and Communication Engineering</p>
+                <div class="social-icons">
+                  <a href="https://www.linkedin.com/in/preethamc1078" class="social-icon">
+                    <span>in</span>
+                  </a>
+                  <a href="https://github.com/PreethamCP" class="social-icon">
+                    <span>gh</span>
+                  </a>
+                  <a href="https://drive.google.com/drive/folders/17RiVl6zvqJ8z_VVL2umcQq24rnfhPf7p" class="social-icon">
+                    <span>rs</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -158,146 +150,332 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="carousel-wrapper">
-          <button class="carousel-btn prev" id="projects-prev">‹</button>
-          <button class="carousel-btn next" id="projects-next">›</button>
-          <div class="carousel-indicators" id="projects-indicators"></div>
-          <div class="projects-carousel" id="projects-carousel">
-            <div class="carousel-track" id="projects-track">
-              <!-- License Plate Recognition -->
-              <div class="project-card fade-in">
-                <div class="project-image gradient-1"></div>
-                <div class="project-info">
-                  <h3>License Plate Recognition System</h3>
-                  <p>
-                    Built an intelligent system on Raspberry Pi 3B+ with a USB
-                    camera, using Python and image processing to detect and read
-                    license plates in real time.
-                  </p>
-                  <div class="project-tags">
-                    <span class="tag">Raspberry Pi</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">OpenCV</span>
-                  </div>
+<!-- Skills Section -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="gradient-text">Skills & Expertise</span>
+        <div class="title-decoration"></div>
+      </h2>
+    </div>
+    <div class="skills-container">
+      <button class="scroll-btn scroll-left" id="skills-scroll-left">
+        ‹
+      </button>
+      <button class="scroll-btn scroll-right" id="skills-scroll-right">
+        ›
+      </button>
+      <div class="skills-wrapper" id="skills-wrapper">
+        <div class="skills-track" id="skills-track">
+          <div class="skill-item glass-card">
+            <div class="skill-icon">
+              <div class="icon-bg"></div>
+              <span>⚡</span>
+            </div>
+            <h3>Embedded Systems</h3>
+            <p>Designing microcontroller-based systems for real-world applications</p>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="90"></div>
+              </div>
+              <span class="level-text">Expert</span>
+            </div>
+          </div>
+          <div class="skill-item glass-card">
+            <div class="skill-icon">
+              <div class="icon-bg"></div>
+              <span>💾</span>
+            </div>
+            <h3>Firmware Development</h3>
+            <p>Writing efficient and reliable low-level code for devices</p>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="85"></div>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-item glass-card">
+            <div class="skill-icon">
+              <div class="icon-bg"></div>
+              <span>🔌</span>
+            </div>
+            <h3>Arduino & ESP32</h3>
+            <p>Rapid prototyping and IoT solutions with Arduino & ESP32 boards</p>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="88"></div>
+              </div>
+              <span class="level-text">Expert</span>
+            </div>
+          </div>
+          <div class="skill-item glass-card">
+            <div class="skill-icon">
+              <div class="icon-bg"></div>
+              <span>💻</span>
+            </div>
+            <h3>C++ Programming</h3>
+            <p>Developing robust applications and firmware with C++</p>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="90"></div>
+              </div>
+              <span class="level-text">Expert</span>
+            </div>
+          </div>
+          <div class="skill-item glass-card">
+            <div class="skill-icon">
+              <div class="icon-bg"></div>
+              <span>🌐</span>
+            </div>
+            <h3>Web Development</h3>
+            <p>Building interactive websites using HTML, CSS, and JavaScript</p>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="80"></div>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+          <div class="skill-item glass-card">
+            <div class="skill-icon">
+              <div class="icon-bg"></div>
+              <span>📂</span>
+            </div>
+            <h3>Django & Git</h3>
+            <p>Backend development with Django and version control using Git</p>
+            <div class="skill-level">
+              <div class="level-bar">
+                <div class="level-fill" data-level="82"></div>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="gradient-text">Featured Projects</span>
+        <div class="title-decoration"></div>
+      </h2>
+    </div>
+    <div class="projects-container">
+      <button class="scroll-btn scroll-left" id="projects-scroll-left">
+        ‹
+      </button>
+      <button class="scroll-btn scroll-right" id="projects-scroll-right">
+        ›
+      </button>
+      <div class="projects-wrapper" id="projects-wrapper">
+        <div class="projects-track" id="projects-track">
+          <div class="project-item">
+            <div class="project-card glass-card">
+              <div class="project-image">
+                <div class="project-gradient gradient-1"></div>
+                <div class="project-overlay">
+                  <a href="#" class="project-link">View Project →</a>
                 </div>
               </div>
-
-              <!-- AI Heart Disease Detection -->
-              <div class="project-card fade-in">
-                <div class="project-image gradient-2"></div>
-                <div class="project-info">
-                  <h3>AI-Based Heart Disease Detection</h3>
-                  <p>
-                    Developed a Django web app powered by Python and ML
-                    algorithms that analyzes heartbeat audio files to detect
-                    murmurs and predict possible heart diseases.
-                  </p>
-                  <div class="project-tags">
-                    <span class="tag">Django</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Machine Learning</span>
-                  </div>
+              <div class="project-content">
+                <h3>License Plate Recognition</h3>
+                <p>
+                  Real-time vehicle license plate detection using Raspberry Pi 3B+ with a USB camera and Python.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Raspberry Pi</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">USB Camera</span>
                 </div>
               </div>
-
-              <!-- Low Power Op-Amp -->
-              <div class="project-card fade-in">
-                <div class="project-image gradient-3"></div>
-                <div class="project-info">
-                  <h3>Ultra-Low Power Op-Amp for IoT Nodes</h3>
-                  <p>
-                    Designed and simulated a subthreshold OTA (Op-Amp) using
-                    Cadence Virtuoso, optimized for ultra-low power consumption
-                    in IoT sensor applications.
-                  </p>
-                  <div class="project-tags">
-                    <span class="tag">Cadence</span>
-                    <span class="tag">Virtuoso</span>
-                    <span class="tag">Analog Design</span>
-                  </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-card glass-card">
+              <div class="project-image">
+                <div class="project-gradient gradient-2"></div>
+                <div class="project-overlay">
+                  <a href="#" class="project-link">View Project →</a>
                 </div>
               </div>
-
-              <!-- IoT Agriculture Monitoring -->
-              <div class="project-card fade-in">
-                <div class="project-image gradient-4"></div>
-                <div class="project-info">
-                  <h3>IoT Agriculture Monitoring System</h3>
-                  <p>
-                    Implemented an ESP32-based smart farming solution that
-                    collects sensor data and uploads it to ThingSpeak for
-                    real-time monitoring and analysis.
-                  </p>
-                  <div class="project-tags">
-                    <span class="tag">ESP32</span>
-                    <span class="tag">IoT</span>
-                    <span class="tag">ThingSpeak</span>
-                  </div>
+              <div class="project-content">
+                <h3>AI-based Heart Disease Detection</h3>
+                <p>
+                  Advanced medical diagnostic platform using Django, Python, and machine learning to detect heart abnormalities.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Django</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">MLCC</span>
                 </div>
               </div>
-
-              <!-- 8-bit Microprocessor -->
-              <div class="project-card fade-in">
-                <div class="project-image gradient-5"></div>
-                <div class="project-info">
-                  <h3>Custom 8-Bit Microprocessor</h3>
-                  <p>
-                    Designed and simulated an 8-bit microprocessor architecture
-                    in Logisim, implementing instruction sets and demonstrating
-                    Turing-complete functionality.
-                  </p>
-                  <div class="project-tags">
-                    <span class="tag">Logisim</span>
-                    <span class="tag">Digital Design</span>
-                    <span class="tag">Microarchitecture</span>
-                  </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-card glass-card">
+              <div class="project-image">
+                <div class="project-gradient gradient-3"></div>
+                <div class="project-overlay">
+                  <a href="#" class="project-link">View Project →</a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>Low Power Op-Amp for IoT Node</h3>
+                <p>
+                  Ultra-low power operational amplifier design for IoT nodes using Cadence Virtuoso for optimal performance.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Cadence</span>
+                  <span class="tech-tag">Virtuoso</span>
+                  <span class="tech-tag">IoT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-card glass-card">
+              <div class="project-image">
+                <div class="project-gradient gradient-4"></div>
+                <div class="project-overlay">
+                  <a href="#" class="project-link">View Project →</a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>IoT Monitoring for Agriculture</h3>
+                <p>
+                  Smart agriculture monitoring system using ESP32 and ThingSpeak for real-time environmental data tracking.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">ESP32</span>
+                  <span class="tech-tag">ThingSpeak</span>
+                  <span class="tech-tag">IoT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-card glass-card">
+              <div class="project-image">
+                <div class="project-gradient gradient-5"></div>
+                <div class="project-overlay">
+                  <a href="#" class="project-link">View Project →</a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h3>8-bit Microprocessor</h3>
+                <p>
+                  Custom-designed 8-bit microprocessor implemented and simulated in Logisim for educational and experimental purposes.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Logisim</span>
+                  <span class="tech-tag">Digital Design</span>
+                  <span class="tech-tag">Microprocessor</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
-        <div class="contact-content fade-in">
-          <h2 class="section-title">Get In Touch</h2>
-          <p>
-            Have a project in mind? Let's work together to create something
-            amazing.
-          </p>
-          <form class="contact-form">
-            <div class="form-group">
-              <input type="text" placeholder="Your Name" required />
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="gradient-text">Let's Connect</span>
+            <div class="title-decoration"></div>
+          </h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info glass-card">
+            <h3>Get in touch</h3>
+            <p>
+              I'm always interested in hearing about new project and
+              opportunities.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <div>
+                  <h4>Email</h4>
+                  <p>deepuchowdhalli@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>Bengaluru, KA</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">💼</span>
+                <div>
+                  <h4>Availability</h4>
+                  <p>Open for Work</p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <input type="email" placeholder="Your Email" required />
-            </div>
-            <div class="form-group">
-              <textarea rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
+          </div>
+          <div class="contact-form-wrapper glass-card">
+            <form class="contact-form">
+              <div class="form-row">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="form-input"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <input
+                type="text"
+                placeholder="Subject"
+                class="form-input"
+                required
+              />
+              <textarea
+                placeholder="Your Message"
+                rows="5"
+                class="form-input"
+                required
+              ></textarea>
+              <button type="submit" class="submit-btn glass-btn">
+                <span>Send Message</span>
+                <div class="btn-glow"></div>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 C Preetham. All rights reserved.</p>
-      <div class="social-links">
-        <a href="mailto:preethamchowdhalli@gmail.com.com" target="_blank">📧</a>
-        <a href="https://preethamcp.github.io/Portfolio/" target="_blank">💼</a>
-        <a href="https://github.com/PreethamCP" target="_blank">🐱</a>
-        <a href="https://www.linkedin.com/in/preethamc1078" target="_blank"
-          >🔗</a
-        >
+    <footer class="glass-footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Portfolio.</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/preethamc1078" class="footer-link">LinkedIn</a>
+          <a href="https://github.com/PreethamCP" class="footer-link">GitHub</a>
+          <a href="https://drive.google.com/drive/folders/17RiVl6zvqJ8z_VVL2umcQq24rnfhPf7p" class="footer-link">Resume</a>
+        </div>
       </div>
     </footer>
 
