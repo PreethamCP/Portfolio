@@ -1053,7 +1053,7 @@ textarea.form-input {
 
     .skills-wrapper,
     .projects-wrapper {
-        margin: 0 40px;
+        margin: 0 0px;
     }
 
     .footer-content {
@@ -1077,3 +1077,4 @@ textarea.form-input {
         gap: 1rem;
     } */
 }
+
