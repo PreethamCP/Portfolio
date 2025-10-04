@@ -205,7 +205,7 @@
 
         .scroll-indicator {
             position: absolute;
-            bottom: 3rem;
+            bottom: 5rem;
             transform: translateX(-50%);
             font-size: 0.8rem;
             color: var(--text-dim);
@@ -540,3 +540,4 @@
                 color: var(--text);
             }
         }
+
